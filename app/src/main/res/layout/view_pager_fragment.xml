@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        tools:context=".detailsView.ViewPager.ViewPagerFragment">
+
+        <com.gigamole.infinitecycleviewpager.HorizontalInfiniteCycleViewPager
+            android:id="@+id/horizental_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            ads:layout_constraintBottom_toTopOf="@+id/adView"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:layout_constraintTop_toTopOf="parent"
+            app:icvp_center_page_scale_offset="30dp"
+            app:icvp_interpolator="@android:anim/linear_interpolator"
+            app:icvp_max_page_scale=".8"
+            app:icvp_medium_scaled="false"
+            app:icvp_min_page_scale=".55"
+            app:icvp_min_page_scale_offset="5dp"
+            app:icvp_scroll_duration="350" />
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            ads:layout_constraintEnd_toEndOf="@+id/horizental_view_pager"
+            ads:layout_constraintStart_toStartOf="@+id/horizental_view_pager" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

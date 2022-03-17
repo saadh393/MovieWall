@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/topRoundedCorner"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="10dp"-->
+<!--        android:orientation="vertical"-->
+<!--        android:background="@drawable/top_rounded_corder"/>-->
+
+    <ImageView
+        android:id="@+id/image_viewPager_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/frame"
+        tools:src="@tools:sample/backgrounds/scenic"
+        android:layout_above="@id/linearLayout"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/round_cornar_white"
+
+        >
+
+        <ImageView
+            android:id="@+id/fav_btn"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_favorite" />
+
+        <ImageView
+            android:id="@+id/setWallpaper"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@drawable/round_cornar_indigo"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_wallpaper" />
+
+        <ImageView
+            android:id="@+id/shareBTN_"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/red_shape"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_share_white" />
+
+        <ImageView
+            android:id="@+id/download_image"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_save" />
+
+        <TextView
+            android:id="@+id/fav_check"
+            android:layout_width="2dp"
+            android:layout_height="2dp"
+            android:text=""
+            android:textSize="2sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/heartAnim"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:alpha="0"
+        app:srcCompat="@drawable/react_shape" />
+
+    <ImageView
+        android:id="@+id/heartWhite"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:alpha="0"
+        app:srcCompat="@drawable/react_shape_white" />
+
+
+</RelativeLayout>

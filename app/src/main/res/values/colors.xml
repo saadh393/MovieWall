@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>  <!-- Title Of The Screen -->
+    <color name="colorPrimaryDark">#38479C</color> <!-- Status Bar Color -->
+    <color name="colorAccent">#5E35B1</color>
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_for_details_activity"
+    app:startDestination="@id/viewPagerFragment2">
+
+    <fragment
+        android:id="@+id/viewPagerFragment2"
+        android:name="com.wwinc.moviewall.detailsView.ViewPager.ViewPagerFragment"
+        android:label="ViewPagerFragment" >
+<!--        <action-->
+<!--            android:id="@+id/action_viewPagerFragment2_to_fullScreenFragment"-->
+<!--            app:destination="@id/fullScreenFragment" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_viewPagerFragment2_to_fullScreenFragment2"-->
+<!--            app:destination="@id/fullScreenFragment"-->
+<!--            app:enterAnim="@android:anim/fade_in"-->
+<!--            app:exitAnim="@android:anim/fade_out"-->
+<!--            app:popEnterAnim="@anim/fragment_fade_enter"-->
+<!--            app:popExitAnim="@anim/fragment_fade_exit" />-->
+        <action
+            android:id="@+id/actionViewPagerFragment2ToFullScreenFragment2"
+            app:destination="@id/fullScreenFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+             />
+    </fragment>
+    <fragment
+        android:id="@+id/fullScreenFragment"
+        android:name="com.wwinc.moviewall.detailsView.FullScreenView.FullScreenFragment"
+        android:label="full_screen_fragment"
+        tools:layout="@layout/full_screen_fragment" >
+        <argument
+            android:name="position"
+            app:argType="integer" />
+        <argument
+            android:name="WHOLE_LIST"
+            app:argType="com.wwinc.moviewall.networking.Wallpaper_ModelItem[]" />
+        <action
+            android:id="@+id/action_fullScreenFragment_to_viewPagerFragment2"
+            app:destination="@id/viewPagerFragment2"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out" />
+    </fragment>
+</navigation>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/containerFragment2">
+
+    <fragment
+        android:id="@+id/setting"
+        android:name="com.wwinc.moviewall.menu.setting.Setting"
+        android:label="Setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/aboutUs"
+        android:name="com.wwinc.moviewall.menu.aboutUs.AboutUs"
+        android:label="About Us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/containerFragment2"
+        android:name="com.wwinc.moviewall.Launcher.ContainerFragment"
+        android:label="Home" />
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.wwinc.moviewall.detailsView.ViewPager.ViewPagerFragment"
+        android:label="view_pager_fragment"
+        tools:layout="@layout/view_pager_fragment" />
+    <fragment
+        android:id="@+id/favourite"
+        android:name="com.wwinc.moviewall.favourite_fragment.Favourite"
+        android:label="Favourite" />
+    <fragment
+        android:id="@+id/share"
+        android:name="com.wwinc.moviewall.share.Share"
+        android:label="Share" />
+    <fragment
+        android:id="@+id/rateUs"
+        android:name="com.wwinc.moviewall.rateus.RateUs"
+        android:label="Rate Us" />
+    <fragment
+        android:id="@+id/privacyPolicy"
+        android:name="com.wwinc.moviewall.privacypolicy.PrivacyPolicy"
+        android:label="PrivacyPolicy" />
+    <fragment
+        android:id="@+id/ourOtherApps"
+        android:name="com.wwinc.moviewall.ourotherapps.OurOtherApps"
+        android:label="Our Others Apps"
+        tools:layout="@layout/fragment_our_other_apps">
+        <action
+            android:id="@+id/action_ourOtherApps_to_otherAppsDetailsView"
+            app:destination="@id/otherAppsDetailsView" />
+    </fragment>
+    <fragment
+        android:id="@+id/otherAppsDetailsView"
+        android:name="com.wwinc.moviewall.ourotherapps.OtherAppsDetailsView"
+        android:label="Our Others App"
+        tools:layout="@layout/fragment_other_apps_details_view">
+        <argument
+            android:name="imageurl"
+            app:argType="string" />
+        <argument
+            android:name="transitionName"
+            app:argType="string" />
+        <argument
+            android:name="coverPhoto"
+            app:argType="string" />
+        <argument
+            android:name="appName"
+            app:argType="string" />
+        <argument
+            android:name="appDescription"
+            app:argType="string" />
+        <argument
+            android:name="packageName"
+            app:argType="string" />
+    </fragment>
+</navigation>
