@@ -8,14 +8,14 @@ apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
     buildToolsVersion "29.0.3"
 
     defaultConfig {
         applicationId "com.wwinc.MovieWall"
         minSdkVersion 21
-        targetSdkVersion 29
-        versionCode 6
+        targetSdkVersion 30
+        versionCode 7
         versionName "1.0.6"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
