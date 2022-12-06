@@ -12,32 +12,26 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.os.Handler
-import android.text.InputType
 import android.util.Log
 import android.view.LayoutInflater
-import android.view.Menu
 import android.view.View
-import android.view.ViewGroup
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.marginBottom
-import androidx.core.view.marginLeft
-import androidx.core.view.marginStart
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdView
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.applovin.mediation.MaxAd
+import com.applovin.mediation.MaxAdViewAdListener
+import com.applovin.mediation.MaxError
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.wwinc.moviewall.databinding.ActivityMainBinding
 import java.io.File
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), MaxAdViewAdListener {
 
     lateinit var binding: ActivityMainBinding
     lateinit var drawerLayout: DrawerLayout
@@ -45,6 +39,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var sharedPrefReviewdorNot : SharedPreferences
     var userEntryCounter : Int = 0
     private var mFirebaseAnalytics: FirebaseAnalytics? = null
+
 
 
 
@@ -57,6 +52,7 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         supportActionBar?.elevation = 0f
 
+
         val sharedPreferencesEditor = getSharedPreferences("RATING", Context.MODE_PRIVATE)!!.edit()
         val sharedPrefTrackingUserActivity = getSharedPreferences("USERACTIVITY", Context.MODE_PRIVATE)
         val editorSharedPrefTrackingUserActivity = getSharedPreferences("USERACTIVITY", Context.MODE_PRIVATE).edit()
@@ -64,6 +60,8 @@ class MainActivity : AppCompatActivity() {
         sharedPreferences.putString("POSTITION_2", null).apply()
 
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+
+
 
 
 
@@ -149,7 +147,6 @@ class MainActivity : AppCompatActivity() {
             }else{
                 dialog.dismiss()
                 if(selectedRating < 4){
-                    Toast.makeText(this, "Bellow 4", Toast.LENGTH_SHORT).show()
                     showThankYouDialog("Thanks for sharing your feedback. We’re sorry your experience didn’t match your expectations. It was an uncommon instance and we’ll do better in the future.")
                 }
             }
@@ -218,6 +215,43 @@ class MainActivity : AppCompatActivity() {
 
 
 
+    override fun onAdLoaded(ad: MaxAd?) {
+        TODO("Not yet implemented")
+        Log.d("123as123", "onAdLoaded: ")
+    }
+
+    override fun onAdDisplayed(ad: MaxAd?) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onAdHidden(ad: MaxAd?) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onAdClicked(ad: MaxAd?) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onAdLoadFailed(adUnitId: String?, error: MaxError?) {
+        TODO("Not yet implemented")
+        Log.d("123as123", "onAdLoadFailed: ")
+    }
+
+    override fun onAdDisplayFailed(ad: MaxAd?, error: MaxError?) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onAdExpanded(ad: MaxAd?) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onAdCollapsed(ad: MaxAd?) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+    }
 
 }
 

@@ -20,10 +20,14 @@
         android:requestLegacyExternalStorage="true"
         android:installLocation="preferExternal"
         android:networkSecurityConfig="@xml/network_security_config"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        >
+
         <activity
             android:name=".SplashScreen.Splash_Screen"
-            android:noHistory="true">
+            android:noHistory="true"
+            android:exported="true"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -47,10 +51,8 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="@string/admob_application_id"/>
+        <meta-data android:name="applovin.sdk.key"
+            android:value="kGKtwUwP9LOS_vwVkKxiClpAlXvHNt7XwMNMRLBvngMQO_yVDI4gHpAn-0yTHC2P5fZkk6ckn2dCgXVBMK3yNC"/>
     </application>
 
 </manifest>

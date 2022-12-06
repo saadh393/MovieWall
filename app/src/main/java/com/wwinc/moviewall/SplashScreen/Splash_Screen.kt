@@ -36,12 +36,6 @@ class Splash_Screen : AppCompatActivity() {
         val repository = RepositoryWallpaper(databaseRef)
 
 
-//        coroutineScope.launch {
-//            val imageUrl = WallpaperApi.retrofitService.getLinksAsync().await()
-//        }
-
-
-
 //        // Internet Connection
         if (!isNetworkConnected(applicationContext)) {
             showDialog()

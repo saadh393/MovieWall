@@ -6,17 +6,21 @@ apply plugin: "androidx.navigation.safeargs"
 apply plugin: 'com.google.gms.google-services'
 // Apply the Crashlytics Gradle plugin
 apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'applovin-quality-service'
+applovin {
+    apiKey "-sTqXZt9ka-iuJfxNfEf5LSFZF6OxHd3h2TtHcw7ZvmZAIMwVee3E4KzmbCbGfg-x7HN-_1zl3NrdXAg4MHV93"
+}
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 33
     buildToolsVersion "29.0.3"
 
     defaultConfig {
         applicationId "com.wwinc.MovieWall"
         minSdkVersion 21
-        targetSdkVersion 30
-        versionCode 7
-        versionName "1.0.6"
+        targetSdkVersion 33
+        versionCode 8
+        versionName "1.0.7"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
@@ -103,19 +107,23 @@ dependencies {
     implementation "androidx.room:room-runtime:2.3.0"
     kapt "androidx.room:room-compiler:2.3.0"
 
-    // Mopub
-    implementation 'com.google.ads.mediation:mopub:5.16.4.0'
+//     Mopub
+//    implementation 'com.google.ads.mediation:mopub:5.16.4.0'
 
     //AdColony
-    implementation 'com.google.ads.mediation:adcolony:4.5.0.0'
+//    implementation 'com.google.ads.mediation:adcolony:4.5.0.0'
 
     //Firebase
     implementation 'com.google.firebase:firebase-core:19.0.0'
     implementation 'com.google.firebase:firebase-analytics-ktx:19.0.0'
     implementation 'com.google.firebase:firebase-crashlytics:18.0.0'
     implementation 'com.google.firebase:firebase-database:20.0.0'
-    implementation 'com.google.firebase:firebase-ads:20.1.0'
+//    implementation 'com.google.firebase:firebase-ads:20.1.0'
     implementation 'com.google.firebase:firebase-messaging:22.0.0'
     implementation 'com.google.firebase:firebase-inappmessaging-display:20.0.0'
 
+    implementation "io.grpc:grpc-okhttp:1.32.2"
+    implementation("com.applovin:applovin-sdk:11.5.5")
+
 }
+

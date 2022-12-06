@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
+
     >
 
     <data>
@@ -27,36 +27,34 @@
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             app:layout_constraintTop_toTopOf="parent"
-            app:tabIndicatorHeight="3dp"
             app:tabIndicatorColor="#fff"
+            app:tabIndicatorHeight="3dp"
             app:tabMode="fixed"
-            app:tabTextColor="#fff"
             app:tabPaddingBottom="8dp"
-            app:tabPaddingTop="15dp" />
+            app:tabPaddingTop="15dp"
+            app:tabTextColor="#fff"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+<!--        app:layout_constraintBottom_toTopOf="@+id/adView"-->
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewpager"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/adView"
+            app:layout_constraintBottom_toTopOf="@+id/adholder"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tabLayout" >
-
+            app:layout_constraintTop_toBottomOf="@id/tabLayout">
 
         </androidx.viewpager2.widget.ViewPager2>
 
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/adView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            ads:adSize="BANNER"
-            ads:adUnitId="@string/banner_ad_unit_id"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-
+        <LinearLayout
+            android:id="@+id/adholder"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:gravity="top"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

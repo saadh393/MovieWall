@@ -14,9 +14,11 @@
 <!--    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>-->
 <!--    <string name="interstital_ad">ca-app-pub-3940256099942544/1033173712</string>-->
 
-    <string name="admob_application_id">ca-app-pub-7523967250496777~2937710568</string>
-    <string name="banner_ad_unit_id">ca-app-pub-7523967250496777/5372302213</string>
-    <string name="interstital_ad">ca-app-pub-7523967250496777/1241485518</string>
+<!--    <string name="admob_application_id">ca-app-pub-7523967250496777~2937710568</string>-->
+<!--    <string name="banner_ad_unit_id">ca-app-pub-7523967250496777/5372302213</string>-->
+<!--    <string name="interstital_ad">ca-app-pub-7523967250496777/1241485518</string>-->
+
+    <string name="applovin_banner">0e9c8ca2cdf69e4e</string>
 
     <string name="companyName">WW Inc.</string>
     <string name="version">Version - 1.0.6</string>

@@ -33,8 +33,6 @@ class GridView_Adapter(val context : Context, var dataList : List<Wallpaper_Mode
 
     override fun onBindViewHolder(holder: GridViewViewHolder, position: Int) {
 
-        Log.d("123as123", "GridView: " + dataList[position])
-
         Glide
             .with(context)
             .load(dataList[position].imageURL)
